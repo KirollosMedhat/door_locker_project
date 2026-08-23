@@ -1,0 +1,21 @@
+# AVR-GCC / Eclipse CDT build output (regenerated on every build)
+Debug/
+Release/
+*.o
+*.d
+*.elf
+*.map
+*.lss
+*.hex
+*.eep
+
+# Eclipse project-local settings (machine-specific, not portable)
+.settings/
+
+# Proteus autosave/session files (not meaningfully different from the main .pdsprj)
+*.pdsbak
+*.workspace
+
+# OS cruft
+.DS_Store
+Thumbs.db
