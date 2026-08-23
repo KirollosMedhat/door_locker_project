@@ -40,9 +40,6 @@ MC2 is the decision-maker: it owns the stored password (in external EEPROM over 
 
 Each firmware folder is a standalone AVR-Eclipse / Atmel Studio project (`.cproject` + `.project`) targeting **ATmega16 @ 8 MHz**, built with **WinAVR/AVR-GCC**. They are separate projects because they're separate physical chips — there's no shared build here, each gets flashed independently.
 
-**Note on duplication:** `lcd.c`/`lcd.h` appear in both folders, byte-for-byte identical. That's not a mistake — MC2's headers include the LCD driver even though its `Main.c` doesn't currently call it, likely left over from an earlier version of the control-unit logic that displayed status locally. It's kept as-is here since that's what the original project contained; if you pick this back up, it's a reasonable candidate to either wire in or remove.
-
-**What's excluded and why:** the original project folders also contained `Debug/` subfolders with compiled `.o`/`.elf`/`.map`/`.lss` output. Those are AVR-GCC build artifacts regenerated automatically every time you build in Eclipse — not source, and they'd immediately go stale relative to the `.c` files, so they're left out here (see `.gitignore`) in favor of just the source that produces them.
 
 ## Building
 
